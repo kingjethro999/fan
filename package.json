@@ -1,0 +1,23 @@
+{
+  "name": "fan-cli",
+  "version": "1.0.0",
+  "description": "High-performance binary encryptor and decryptor CLI tool for custom .fan files",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "fan": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "start": "node dist/cli.js"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0"
+  }
+}

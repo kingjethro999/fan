@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Encrypted .fan files
+*.fan
+
+# Environment & OS files
+.env
+.env.*
+.DS_Store
+*.log
