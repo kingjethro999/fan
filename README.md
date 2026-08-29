@@ -39,16 +39,23 @@ When files are converted to `.fan`:
 
 ---
 
-## ⚙️ Installation
+## ⚡ Quick 1-Line Installation
 
-### Global System Installation
-Run the following commands in the project directory to build and link `fan` globally across your machine:
+Install `fan` globally on any Linux/macOS machine with Node.js:
 
 ```bash
-# Clone or navigate to directory
-cd /path/to/fan
+curl -fsSL https://raw.githubusercontent.com/kingjethro999/fan/main/install.sh | bash
+```
 
-# Build TypeScript source code
+---
+
+## ⚙️ Manual Installation & Build
+
+If you cloned the source repository locally:
+
+```bash
+# Install dependencies & build
+npm install
 npm run build
 
 # Install globally
@@ -59,6 +66,7 @@ Verify global installation:
 ```bash
 fan help
 ```
+
 
 ---
 
