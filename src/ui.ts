@@ -17,11 +17,12 @@ export function printHelp() {
    $ ${pc.cyan('fan')} ${pc.green('<command>')} ${pc.yellow('[options]')}
 
  ${pc.bold(pc.underline('COMMANDS:'))}
-   ${pc.green('encrypt')}      Encrypt matching text files into un-transcribable ${pc.cyan('.fan')} binary format
-   ${pc.green('decrypt')}      Decrypt all ${pc.cyan('.fan')} files back to their original text format
-   ${pc.green('status')}       Inspect metadata of a ${pc.cyan('.fan')} file without modifying it
-   ${pc.green('key')}          Display current master key location and details
-   ${pc.green('help')}         Show this interactive help menu
+   ${pc.green('encrypt')}               Encrypt matching text files into un-transcribable ${pc.cyan('.fan')} binary format
+   ${pc.green('decrypt')}               Decrypt all ${pc.cyan('.fan')} files back to their original text format
+   ${pc.green('status')} ${pc.yellow('<file>')}         Inspect metadata of a ${pc.cyan('.fan')} file without modifying it
+   ${pc.green('key')}                   Display active master key & sync instructions
+   ${pc.green('key set')} ${pc.yellow('<key>')}       Set or sync a master key across devices
+   ${pc.green('help')}                  Show this interactive help menu
 
  ${pc.bold(pc.underline('OPTIONS:'))}
    ${pc.yellow('-t, --target <ext>')}   File extension(s) to target (e.g. ${pc.bold('.txt')}, ${pc.bold('.md')}, ${pc.bold('.env')}, or ${pc.bold('.txt,.md')})
@@ -44,8 +45,11 @@ export function printHelp() {
    ${pc.gray('# Decrypt every .fan file back to original file formats')}
    $ ${pc.cyan('fan decrypt')}
 
-   ${pc.gray('# Encrypt single file with custom secret key')}
-   $ ${pc.cyan('fan encrypt --file secret.txt --key mySecretPassword123')}
+   ${pc.gray('# View your master key to copy to another device')}
+   $ ${pc.cyan('fan key')}
+
+   ${pc.gray('# Set master key on a second device to decrypt synced files')}
+   $ ${pc.cyan('fan key set <copiedMasterKey>')}
 `
   );
 }
@@ -85,7 +89,6 @@ export function printSummary(stats: {
   console.log(`  ${pc.bold('Key Source:')}      ${pc.gray(stats.keySource)}`);
   console.log(`  ${pc.bold('Duration:')}        ${pc.gray(`${stats.durationMs}ms`)}\n`);
 }
-
 
 
 // king@king-HP-EliteBook-840-G2:~/Documents/fan$ fan key
