@@ -89,20 +89,3 @@ export function printSummary(stats: {
   console.log(`  ${pc.bold('Key Source:')}      ${pc.gray(stats.keySource)}`);
   console.log(`  ${pc.bold('Duration:')}        ${pc.gray(`${stats.durationMs}ms`)}\n`);
 }
-
-
-// king@king-HP-EliteBook-840-G2:~/Documents/fan$ fan key
-
-//   ██████╗  █████╗ ███╗   ██╗
-//   ██╔════╝ ██╔══██╗████╗  ██║
-//   █████╗   ███████║██╔██╗ ██║
-//   ██╔══╝   ██╔══██║██║╚██╗██║
-//   ██║      ██║  ██║██║ ╚████║
-//   ╚═╝      ╚═╝  ╚═╝╚═╝  ╚═══╝  v1.0.0 — Binary File Encrypter
-
-// ─── FAN MASTER KEY CONFIG ───
-//   Source:         Master Key (/home/king/.fan/master.key)
-//   Master Key:     66b9cbb1bb0f8463f0c6a06548f95d731ea816820230f15c93e10c4c6a4f2fc2
-
-//   To use this same key on another machine:
-//   $ fan key set 66b9cb---------------------------b1bb0f8463f0c6a06548f95d731e-------------------------------a816820230f15c93e10c4c6a4f2fc2
