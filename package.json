@@ -8,11 +8,13 @@
     "fan": "./dist/cli.js"
   },
   "scripts": {
-    "build": "tsup",
-    "start": "node dist/cli.js"
+    "build": "node init && tsup",
+    "start": "node init && node dist/cli.js"
   },
   "dependencies": {
     "commander": "^13.1.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
